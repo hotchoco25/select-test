@@ -1,0 +1,66 @@
+.top_page {
+  background-color: white;
+  color: black;
+  display: flex;
+  height: 90vh;
+}
+
+.test_lists {
+  width: 20vw;
+  border-right: 1px solid black;
+}
+
+.test_lists>ul>li {
+  border-bottom: 1px solid black;
+  height: 10vh;
+  text-align: center;
+  font-size: 3.5vh;
+}
+
+.test_questions {
+  width: 20vw;
+  border-right: 1px solid black;
+}
+
+.test_questions>ul>li {
+  border-bottom: 1px solid black;
+  height: 10vh;
+  text-align: center;
+  font-size: 3.5vh;
+}
+
+.action {
+  width: 60vw;
+  position: relative;
+}
+
+.question_info {
+  border: 1px solid black;
+  height: 10vh;
+  margin: 10%;
+  text-align: center;
+  font-size: 3.5vh;
+}
+
+.test_start {
+  border: 1px solid black;
+  width: 20%;
+  height: 7%;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  text-align: center;
+  font-size: 4vh;
+}
+
+.question_edit {
+  border: 1px solid black;
+  width: 20%;
+  height: 7%;
+  position: absolute;
+  top: 60%;
+  left: 40%;
+  text-align: center;
+  text-align: center;
+  font-size: 4vh;
+}
