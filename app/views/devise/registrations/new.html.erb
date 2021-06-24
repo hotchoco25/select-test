@@ -1,39 +1,38 @@
-<h2>Sign up</h2>
+<h2>新規登録</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :main_name %><br />
-    <%= f.text_field :main_name, autofocus: true, autocomplete: "main_name" %>
+    <label>名前</label><br />
+    <%= f.text_field :main_name, autofocus: true, autocomplete: "main_name", placeholder: "必須" %>
   </div>
 
   <div class="field">
-    <%= f.label :sub_name %><br />
-    <%= f.text_field :sub_name, autocomplete: "sub_name" %>
+    <label>名前(テスト用)</label><br />
+    <%= f.text_field :sub_name, autocomplete: "sub_name", placeholder: "必須" %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <label>パスワード</label>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <em>(<%= @minimum_password_length %>文字以上の英数字)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.password_field :password, autocomplete: "new-password", placeholder: "必須" %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <label>パスワード(確認用)</label><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "必須" %>
   </div>
 
   <div class="field">
-    <%= f.label :position %><br />
-    <%= f.text_field :position, autocomplete: "position" %>
+    <label>拠点</label><br />
+    <%= f.text_field :position, autocomplete: "position", placeholder: "必須" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "新規登録" %>
   </div>
 <% end %>
-
-<%= render "devise/shared/links" %>
+<%= link_to "ログイン", new_user_session_path, class: 'login'%>
