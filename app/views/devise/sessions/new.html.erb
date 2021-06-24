@@ -1,0 +1,20 @@
+<h2>ログイン</h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <label>名前</label><br />
+    <%= f.text_field :login, autofocus: true, autocomplete: "login" %>
+  </div>
+
+  <div class="field">
+    <label>パスワード</label><br />
+    <%= f.password_field :password, autocomplete: "current-password" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "ログイン" %>
+  </div>
+<% end %>
+<%= link_to "新規登録", new_user_registration_path, class: 'sign_up'%>
