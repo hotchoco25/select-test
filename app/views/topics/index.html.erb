@@ -6,14 +6,14 @@
       <li>
         <%= link_to "リスト作成", new_topic_path %>
       </li>
-      <li>
-      list1<br>
-      creator1
-      </li>
-      <li>
-      list2<br>
-      creator2
-      </li>
+      <% if @topics.present? %>
+        <% @topics.each do |topic| %>
+          <li>
+            <%= topic.topic_name %><br>
+            <%= topic.creator %>
+          </li>
+        <% end %>
+      <% end %>
     </ul>
   </div>
   <div class="test_questions">

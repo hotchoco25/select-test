@@ -1,5 +1,6 @@
 class TopicsController < ApplicationController
   def index
+    @topics = Topic.order("created_at DESC").includes(:user)
   end
 
   def new
