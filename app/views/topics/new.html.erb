@@ -1,0 +1,13 @@
+<%= render "shared/header" %>
+
+<div>
+  <%= form_with model: @topic, local: true do |f| %>
+    <div>リスト名</div>
+    <%= f.text_area :topic_name %>
+    <div>作成者</div>
+    <%= f.text_area :creator %>
+    <div>
+      <%= f.submit "リスト作成" %>
+    </div>
+  <% end %>
+</div>
