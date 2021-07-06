@@ -7,27 +7,15 @@
 # ER図
 
 ## usersテーブル
-### main_usersテーブル
 
-| Colum    | Type   | Option      |
-| -------- | ------ | ----------- |
-| name     | string | null: false |
-| password | string | null: false |
-| position | string | null: false |
-| logo     | image  |             |
+| Colum     | Type   | Option      |
+| --------- | ------ | ----------- |
+| main_name | string | null: false |
+| sub_name  | string | null: false |
+| password  | string | null: false |
+| position  | string | null: false |
+| logo      | image  |             |
 
-- has_one :sub_user
-- has_many :topics
-
-### sub_usersテーブル
-
-| Colum     | Type       | Option                         |
-| --------- | ---------- | ------------------------------ |
-| name      | string     | null: false                    |
-| password  | string     | null: false                    |
-| main_user | references | null: false, foreign_key: true |
-
-- belongs_to :main_user
 - has_many :topics
 
 ## topicsテーブル
@@ -39,8 +27,7 @@
 | main_user  | references | null: false, foreign_key: true |
 | sub_user   | references | null: false, foreign_key: true |
 
-- belongs_to :main_user
-- belongs_to :sub_user
+- belongs_to :user
 - has_many :questions
 
 ## questionsテーブル
